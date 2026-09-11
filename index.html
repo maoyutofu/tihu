@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="FSOJyD691Cslsf0MPjLJMQ">
+<head data-page-node-id="4oAIDZXuKbGlsY5CprlWvb">
+<meta charset="utf-8" data-page-node-id="z7nvM5ntomzhXj7uQRz5kZ" />
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="Tv0BnYnFHidTsW3phEuAJ7" />
+<title>鹈鹕骑自行车 · 模型生成对比</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    padding: 32px 20px 56px;
+    background: radial-gradient(140% 120% at 50% 0%, #f4f8ff 0%, #e7eefb 55%, #d8e3f5 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    color: #1f2a3d;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 28px; }
+  h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    letter-spacing: .04em;
+  }
+  .prompt {
+    display: inline-block;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 12px 18px;
+    background: #ffffff;
+    border: 1px solid #d4e0f2;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -18px rgba(28,62,108,.5);
+    font-size: 14px;
+    line-height: 1.7;
+    color: #44566f;
+  }
+  .prompt b { color: #1f2a3d; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 48px -26px rgba(28,62,108,.5), 0 1px 0 #fff inset;
+    display: flex;
+    flex-direction: column;
+  }
+  .card__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eef2f8;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    color: #fff;
+    background: #3b6fd4;
+    padding: 4px 9px;
+    border-radius: 999px;
+  }
+  .card__title { font-size: 16px; font-weight: 700; }
+  .card__meta { margin-left: auto; font-size: 12px; color: #8a99ad; }
+  .frame {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    border: 0;
+    display: block;
+    background: #fbfdff;
+  }
+  .card__foot {
+    padding: 10px 18px 14px;
+    font-size: 12.5px;
+    color: #6b7a90;
+    border-top: 1px solid #eef2f8;
+  }
+  .card__foot code {
+    background: #f1f5fb;
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12.5px;
+    color: #8a99ad;
+  }
+</style>
+</head>
+<body data-page-node-id="DHJ5rjh9o3y6qPWh27CR8W">
+  <div class="wrap" data-page-node-id="gtxrIczhwRnVyrdkngrXs6">
+    <header data-page-node-id="B2iiVsAxM7rte1uNAegyH0">
+      <h1 data-page-node-id="JUfNHtmYnEDiugE2PktNnX">🚲 鹈鹕骑自行车 · 模型生成对比</h1>
+      <div class="prompt" data-page-node-id="QE6bFYDPFQ6eRdknGtnTsw">
+        统一提示词：<b data-page-node-id="tJcoIMrQ5r8ggWCwkk3ZOi">“创建一个HTML，内容是SVG绘制一个鵜鶘骑自行车的2D动画，你不需要任何测试”</b>
+        —— 各模型按文件夹独立生成，下方为并排对比，动画均实时播放。
+      </div>
+    </header>
+
+    <div class="grid" data-page-node-id="sGQfP9WwA29DUyzTUJmYRe">
+      <section class="card" data-page-node-id="wvlp5TQxKRHoXkZGXK9imF">
+        <div class="card__head" data-page-node-id="VpkhXXpfwXUD6AYYeIYKO6">
+          <span class="badge" data-page-node-id="exfo5tH0RHhY8Fbrirvj0D">MODEL A</span>
+          <span class="card__title" data-page-node-id="k2Q6m0GgFY6TTnQZsYOPAl">Deepseek-V4.1-Flash</span>
+          <span class="card__meta" data-page-node-id="BdRURjNftV1K18UzSgDZ0M">骨架 / 细节 / 动画</span>
+        </div>
+        <iframe class="frame" src="Deepseek-V4.1-Flash/pelican-bike.html" title="Deepseek-V4.1-Flash 生成的鹈鹕骑自行车" data-page-node-id="Av8ieGGGwXSMJYkaEC1gKu"></iframe>
+        <div class="card__foot" data-page-node-id="7Qexu3uxEMnyQiLAZBUNPG">源文件：<code data-page-node-id="xCU7TbPwzRNvM3mTR1EkAE">Deepseek-V4.1-Flash/pelican-bike.html</code></div>
+      </section>
+
+      <section class="card" data-page-node-id="jr8qquxhuHiV2n60YBbrbN">
+        <div class="card__head" data-page-node-id="NUMMQNxEvPaXcthl91WeGB">
+          <span class="badge" data-page-node-id="OCcuF8nTjHBFuXcmlNYK2C">MODEL B</span>
+          <span class="card__title" data-page-node-id="3T85tRe9fpr5KzNTc1ffth">Hy3</span>
+          <span class="card__meta" data-page-node-id="f730cCDUocIDIXW6yehtsN">骨架 / 细节 / 动画</span>
+        </div>
+        <iframe class="frame" src="Hy3/pelican-bike.html" title="Hy3 生成的鹈鹕骑自行车" data-page-node-id="7U13XWAsMOa1X972CHfLhF"></iframe>
+        <div class="card__foot" data-page-node-id="hAHRXvZtK8KBiynxKIRu5S">源文件：<code data-page-node-id="pj1EpPfy1cHNLdnr8Wp9MN">Hy3/pelican-bike.html</code></div>
+      </section>
+    </div>
+
+    <footer data-page-node-id="c9JWZU4buGe747hOULR9pa">两份结果均由模型直接生成的独立 HTML 内嵌展示，未做二次修改。</footer>
+  </div>
+</body>
+</html>
