@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="17Df2QfgHnqfQP9n8tD2EB">
+<head data-page-node-id="uyFWCFevbkWMPSV8GDtmdg">
+<meta charset="utf-8" data-page-node-id="IlWynNr1GwHUxB0a28flGQ" />
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="zqH3QRq2wGvUAoezBsth2c" />
+<title>骑自行车的鹈鹕 · SVG 2D 动画</title>
+<style>
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; display: grid; place-items: center; padding: 26px;
+  background: radial-gradient(130% 110% at 50% 0%, #f2f9ff 0%, #e0efff 45%, #cde1f6 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+.stage {
+  width: min(1000px, 100%); background: #fff; border-radius: 26px; padding: 18px 18px 10px;
+  box-shadow: 0 26px 64px -22px rgba(28, 62, 108, .38), 0 1px 0 #fff inset;
+}
+svg.scene { display: block; width: 100%; height: auto; border-radius: 16px; }
+.caption { margin: 10px 6px 4px; text-align: right; color: #5b7291; font-size: 14px; letter-spacing: .12em; }
+</style>
+</head>
+<body data-page-node-id="gBORGxygEaCjIB5N4HVhU3">
+  <main class="stage" data-page-node-id="5yVlKtcxFMI6k139QOV3AE">
+    <svg class="scene" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ttl dsc" data-page-node-id="Beceg2H7nqNEFVZObWxEl2">
+      <title id="ttl">骑自行车的鹈鹕</title>
+      <desc id="dsc" data-page-node-id="2XsjKzkmvp7C6GGqXI66iF">一只鹈鹕骑着自行车向右前进的二维矢量动画：车轮旋转、双腿踩踏、翅膀轻拍、围巾飘动、云与路面滚动。</desc>
+      <defs data-page-node-id="WyTMykBJBAWOimVICQNC1x">
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1" data-page-node-id="2lFTIPL1AJLCBn2yiWevEQ">
+  <stop offset="0%" stop-color="#a9dcff" data-page-node-id="yKSPEBnm4rLbi9ebtWGZuC"/><stop offset="55%" stop-color="#d7efff" data-page-node-id="tITxse5fVgkICnijERnZKe"/><stop offset="100%" stop-color="#eef9ff" data-page-node-id="ZWJVq8YjHba8k0fcSCaz0C"/>
+</linearGradient>
+<radialGradient id="sun" cx="50%" cy="50%" r="50%" data-page-node-id="ETBI2BAuc0kj3zm57czMTQ">
+  <stop offset="0%" stop-color="#fff4c9" data-page-node-id="u1HMt61KGYKtszvNlFcpmg"/><stop offset="70%" stop-color="#ffd86b" data-page-node-id="nddGdDZRbOJdFY9PBAmtQE"/><stop offset="100%" stop-color="#ffc93c" data-page-node-id="2KEXjpJqkBxZW0FN1B47zh"/>
+</radialGradient>
+<linearGradient id="road" x1="0" y1="0" x2="0" y2="1" data-page-node-id="Aaf8pXfsaTGIEuxbAtnNdA">
+  <stop offset="0%" stop-color="#9aa7bb" data-page-node-id="UpuDXBw8GmcZmLbfHJgQUl"/><stop offset="100%" stop-color="#6f7d93" data-page-node-id="HUEE8zJB9tF3lNwQju2g1N"/>
+</linearGradient>
+</defs>
+<!-- ===== 天空 ===== -->
+<rect width="800" height="500" fill="url(#sky)" data-page-node-id="SnvIyRyd8w1PG6YCQTFOMM"/>
+<g opacity="0.5" data-page-node-id="nQO19wTn18uKeqyrdqAp0a">
+  <animateTransform attributeName="transform" type="rotate" values="0 112 96; 360 112 96" dur="48s" repeatCount="indefinite" data-page-node-id="bJGW9ffWPumWOYdKdVLub1"/>
+  <line x1="166.0" y1="96.0" x2="186.0" y2="96.0" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="ONJZb3VfPReQjzIwFSJLyw"/><line x1="150.2" y1="134.2" x2="164.3" y2="148.3" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="sN0olP42m0QCehDU8sK7AQ"/><line x1="112.0" y1="150.0" x2="112.0" y2="170.0" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="TZ0qHOCZxY6s3CXDtEIoot"/><line x1="73.8" y1="134.2" x2="59.7" y2="148.3" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="hGscxmT6S7t2tDvCVcYZPN"/><line x1="58.0" y1="96.0" x2="38.0" y2="96.0" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="t35oJIADrwseVDuq9P3A9V"/><line x1="73.8" y1="57.8" x2="59.7" y2="43.7" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="9IkJk5c9Vfd6WqltKurd8I"/><line x1="112.0" y1="42.0" x2="112.0" y2="22.0" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="ttI228LbJEMuRb0DULVV5B"/><line x1="150.2" y1="57.8" x2="164.3" y2="43.7" stroke="#ffd86b" stroke-width="6" stroke-linecap="round" data-page-node-id="ZZvw9CKlYAxsbgJyk1JapN"/>
+</g>
+<circle cx="112" cy="96" r="62" fill="#ffeaa7" opacity="0.45" data-page-node-id="DMF0PglDX9dDSN2HP1Jeia"/>
+<circle cx="112" cy="96" r="38" fill="url(#sun)" data-page-node-id="cb2Ga0WF1aEZCmc1MZDVMp"/>
+
+<!-- ===== 云 ===== -->
+<g opacity="0.95" data-page-node-id="HDapiLSchiskgGYzJx1ngd">
+  <animateTransform attributeName="transform" type="translate" values="0 0; -420 0" dur="36s" repeatCount="indefinite" data-page-node-id="W2kTQKCkEY2oO8PNY84mjG"/>
+  <g transform="translate(-470 92) scale(0.85)" data-page-node-id="5jfpFWZ24V7DatSUClUbGG"><rect x="-52" y="-4" width="104" height="26" rx="13" fill="#ffffff" data-page-node-id="2Ah37YeNfmNBGZoqhbKh77"/><circle cx="-26" cy="-8" r="20" fill="#ffffff" data-page-node-id="npqgSw4eqaN1GLIrbefbXP"/><circle cx="4" cy="-18" r="26" fill="#ffffff" data-page-node-id="Tm7zXLA2ZHUjfyMHHfYAfH"/><circle cx="34" cy="-6" r="19" fill="#ffffff" data-page-node-id="CzQVShXlErNh20tGuMvgzE"/></g><g transform="translate(-60 62) scale(1.00)" data-page-node-id="JXbtgQD09J7okH3nHMSuTl"><rect x="-52" y="-4" width="104" height="26" rx="13" fill="#ffffff" data-page-node-id="dORUsjk0sacmD1Sb2HuIXE"/><circle cx="-26" cy="-8" r="20" fill="#ffffff" data-page-node-id="8IWkiRJLoLvz49ZvwZtpPa"/><circle cx="4" cy="-18" r="26" fill="#ffffff" data-page-node-id="98IHdK4wUCDxAsuZt8Otwr"/><circle cx="34" cy="-6" r="19" fill="#ffffff" data-page-node-id="16VnS9Q9vR22TtsTt8I54f"/></g><g transform="translate(360 118) scale(0.78)" data-page-node-id="vN9Ya6TcWPxi8ETgwKSAwj"><rect x="-52" y="-4" width="104" height="26" rx="13" fill="#ffffff" data-page-node-id="UEtSdeUAG6YCjasKAzXCbW"/><circle cx="-26" cy="-8" r="20" fill="#ffffff" data-page-node-id="bqYZknXFho6CClqCzWSV6y"/><circle cx="4" cy="-18" r="26" fill="#ffffff" data-page-node-id="w6gxEJBYnV0SKnvIRjpFYq"/><circle cx="34" cy="-6" r="19" fill="#ffffff" data-page-node-id="mIOBG0WarX9GHa547objBv"/></g><g transform="translate(790 74) scale(0.92)" data-page-node-id="DAf1xZDGwkBVil4yqCnzfb"><rect x="-52" y="-4" width="104" height="26" rx="13" fill="#ffffff" data-page-node-id="GhyNumKQI7MGHNa8MvU5mB"/><circle cx="-26" cy="-8" r="20" fill="#ffffff" data-page-node-id="UttRJr1khN20KQR8uh3LGF"/><circle cx="4" cy="-18" r="26" fill="#ffffff" data-page-node-id="vCCZWaYTGSemAA1Bw4Ja4p"/><circle cx="34" cy="-6" r="19" fill="#ffffff" data-page-node-id="x9liypGBE0fMOa3vFCuDr3"/></g>
+</g>
+
+<!-- ===== 远山 ===== -->
+<g data-page-node-id="juOCL4MrdeF71PTsYLBYUz">
+  <animateTransform attributeName="transform" type="translate" values="0 0; -400 0" dur="26s" repeatCount="indefinite" data-page-node-id="IUYi14BZlp90CSSKfBcL4z"/>
+  <path d="M -400 402 Q -300 344 -200 402 Q -100 340 0 402 Q 100 346 200 402 Q 300 338 400 402 Q 500 344 600 402 Q 700 340 800 402 Q 900 346 1000 402 Q 1100 338 1200 402 L 1200 440 L -400 440 Z" fill="#c6e8d6" data-page-node-id="WZCvLXmBuyBHqYEKWmEAOz"/>
+</g>
+<g data-page-node-id="5LLWGDFRQrrhZmW0lWE83t">
+  <animateTransform attributeName="transform" type="translate" values="0 0; -400 0" dur="15s" repeatCount="indefinite" data-page-node-id="UMo0DJ7R8Q1YeLtYuKy7iC"/>
+  <path d="M -400 404 Q -300 356 -200 404 Q -100 348 0 404 Q 100 358 200 404 Q 300 350 400 404 Q 500 356 600 404 Q 700 348 800 404 Q 900 358 1000 404 Q 1100 350 1200 404 L 1200 440 L -400 440 Z" fill="#a9dcbf" data-page-node-id="PSs7PrBgiaRxZVOdX5LaXI"/>
+</g>
+
+<!-- ===== 地面 / 公路 ===== -->
+<rect x="-50" y="398" width="900" height="40" fill="#cdeedb" data-page-node-id="o9d9f28kWvLCV97Q3uxERh"/>
+<rect x="-50" y="436" width="900" height="64" fill="url(#road)" data-page-node-id="ESsR6w6FeZkTHuhkHC0Ysa"/>
+<line x1="-50" y1="436" x2="850" y2="436" stroke="#7e8ca2" stroke-width="3" data-page-node-id="omUS8MynDABuv2t1EW0nSE"/>
+<g data-page-node-id="RPr7415cD5A0vqZHmc68zU">
+  <animateTransform attributeName="transform" type="translate" values="0 0; -100 0" dur="0.85s" repeatCount="indefinite" data-page-node-id="hDj2EAzIGLonBjQ9fVmQVr"/>
+  <rect x="-120" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="sufeJlfFCFbvDC2m0dgqvO"/><rect x="-20" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="5Rbr6c9v4c22tD3tFynS2H"/><rect x="80" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="GVQgTcARQdhlgNkgT4WkNg"/><rect x="180" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="pJFvsNX5AFmq1sUqHTqCuy"/><rect x="280" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="nNniKEeEdF9VDoB6qmAqmL"/><rect x="380" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="6qznxquEifudKApdhdkuDB"/><rect x="480" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="F4qiRNZ47Rtt04TXRS3H3R"/><rect x="580" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="CjdeDhutBUG7DBT9TNY71k"/><rect x="680" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="jktXx7Etq4dgCWSAs5fch3"/><rect x="780" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="LGjMNIV8BrNPuhKnBw8l71"/><rect x="880" y="478" width="56" height="9" rx="4.5" fill="#eef3f9" opacity="0.8" data-page-node-id="VJCkIAIWND5TF3T6gh7RER"/>
+</g>
+
+<!-- ===== 投影 ===== -->
+<ellipse cx="400" cy="438" rx="182" ry="11" fill="#20486e" opacity="0.13" data-page-node-id="Q8qvKJZYbSO50DnNh9keQj"/>
+
+<!-- ===== 车轮 ===== -->
+<g data-page-node-id="tIHFVjJKOTNVgODNO9vfuL"><circle cx="250" cy="385" r="52" fill="none" stroke="#2f3542" stroke-width="10" data-page-node-id="arYOq8vGbrRmNjNE1kFZ4N"/><circle cx="250" cy="385" r="45.5" fill="none" stroke="#dbe3ee" stroke-width="5" data-page-node-id="H7qUDEisMlaqynLkp0TOho"/><circle cx="250" cy="385" r="38" fill="#ffffff" opacity="0.35" data-page-node-id="OgArO8pJoj7EgLF7tWIsFy"/><g data-page-node-id="IuPlflJ5ZYY4CfegDKMFx0"><animateTransform attributeName="transform" type="rotate" values="0 250 385; 360 250 385" dur="0.58s" repeatCount="indefinite" data-page-node-id="3XzM8lotuDlD80gjjLa94u"/><line x1="250.0" y1="385.0" x2="294.0" y2="385.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="dJ9TtFMdImkScKHXBYtN7A"/><line x1="250.0" y1="385.0" x2="288.1" y2="407.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="n9FznImDSrh805pekktqXh"/><line x1="250.0" y1="385.0" x2="272.0" y2="423.1" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="aHYwkHJ3djT5nD245FpFd0"/><line x1="250.0" y1="385.0" x2="250.0" y2="429.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="0RaNNZPLzYb3XneIprxW0P"/><line x1="250.0" y1="385.0" x2="228.0" y2="423.1" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="d9n1orddyitBELBs9FI40C"/><line x1="250.0" y1="385.0" x2="211.9" y2="407.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="mOkF2LsFWroEdzMXCFe9YF"/><line x1="250.0" y1="385.0" x2="206.0" y2="385.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="6odr6P8LBMSrQWxMJEtCKl"/><line x1="250.0" y1="385.0" x2="211.9" y2="363.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="ISAoEsB6iZ7Gb6EuEgAj0s"/><line x1="250.0" y1="385.0" x2="228.0" y2="346.9" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="5WEd8OeGmhxfR6YfXH93Aj"/><line x1="250.0" y1="385.0" x2="250.0" y2="341.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="PXWEZl0rQc0wQQ1OISRMpZ"/><line x1="250.0" y1="385.0" x2="272.0" y2="346.9" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="VE20O4pjk8m10roPXEsOYI"/><line x1="250.0" y1="385.0" x2="288.1" y2="363.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="yCkGmenP1irDNd4J0hUDGw"/></g><circle cx="250" cy="385" r="6" fill="#8b95a5" data-page-node-id="9XrT3s74ZDRo3AJgvt8uMp"/><circle cx="250" cy="385" r="2.4" fill="#e8eef6" data-page-node-id="AAYmhxUxNI8SxK8e4lZp2I"/></g>
+<g data-page-node-id="TFuIEcrbOVD637pUizTLWP"><circle cx="545" cy="385" r="52" fill="none" stroke="#2f3542" stroke-width="10" data-page-node-id="YQ6DEOCTxs9rri1cwzm3AR"/><circle cx="545" cy="385" r="45.5" fill="none" stroke="#dbe3ee" stroke-width="5" data-page-node-id="FfsvmNFmCXo6kJDnbdMQDU"/><circle cx="545" cy="385" r="38" fill="#ffffff" opacity="0.35" data-page-node-id="2fesZ1NJJOZgxtZgIaSYHL"/><g data-page-node-id="I5EiMA2QiuQ5eq3i19bFs9"><animateTransform attributeName="transform" type="rotate" values="0 545 385; 360 545 385" dur="0.58s" repeatCount="indefinite" data-page-node-id="s1Vh6l7OhF1uwkoeIzrKTP"/><line x1="545.0" y1="385.0" x2="589.0" y2="385.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="e9ST4rKFcF6SBCDg9bnWId"/><line x1="545.0" y1="385.0" x2="583.1" y2="407.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="e0EHWIZFA9d2n41kU3cgFX"/><line x1="545.0" y1="385.0" x2="567.0" y2="423.1" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="gz3wI3WOealmsFVJB8yCSM"/><line x1="545.0" y1="385.0" x2="545.0" y2="429.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="BYMXKRh3OgqQ4Rv5V3sPEj"/><line x1="545.0" y1="385.0" x2="523.0" y2="423.1" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="awlSZTj5Zvp2iSXI66Hjp4"/><line x1="545.0" y1="385.0" x2="506.9" y2="407.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="IupaMFb1R3wRrDkuA4bL3e"/><line x1="545.0" y1="385.0" x2="501.0" y2="385.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="CSFJHeGYtnAkLpoRbAxAPN"/><line x1="545.0" y1="385.0" x2="506.9" y2="363.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="loOXTt5eAFpP3uCKcd4E1f"/><line x1="545.0" y1="385.0" x2="523.0" y2="346.9" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="sjpfUqjjjJyyPKHCgejtI6"/><line x1="545.0" y1="385.0" x2="545.0" y2="341.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="7h62jP1q5Y7SAmsViSUesq"/><line x1="545.0" y1="385.0" x2="567.0" y2="346.9" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="bNjsVQAWR6k93sU1fvaN5q"/><line x1="545.0" y1="385.0" x2="583.1" y2="363.0" stroke="#c3cedd" stroke-width="2.4" data-page-node-id="nNRiSgUdYGO1fcOiCiXA2I"/></g><circle cx="545" cy="385" r="6" fill="#8b95a5" data-page-node-id="Olgo76LFTCOzJIHdFF3E2w"/><circle cx="545" cy="385" r="2.4" fill="#e8eef6" data-page-node-id="jh8i8ZEnylLnjM4mXa2HoU"/></g>
+
+<!-- ===== 车身 + 骑手 ===== -->
+<g data-page-node-id="s7VB0JNtYF3Dvf2Sp08kZ6">
+  <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 -1.4; 0 0" dur="0.7s" repeatCount="indefinite" data-page-node-id="zY88Sh9k8VGEetyhSSnDFd"/>
+
+  <!-- 远侧曲柄 + 踏板 -->
+  <g opacity="0.9" data-page-node-id="4a29UKOzAa4ld4eKYnJvOk"><animateTransform attributeName="transform" type="rotate" values="180 390 385; 540 390 385" dur="1.40s" repeatCount="indefinite" data-page-node-id="o4HdrG2viPre06w5eQWHLD"/><line x1="390" y1="385" x2="390" y2="363" stroke="#8b95a5" stroke-width="9" stroke-linecap="round" data-page-node-id="BfCTaci05WnRozmeWAZcRW"/><g data-page-node-id="LiBZsxLbMBikeDZMbB23QI"><animateTransform attributeName="transform" type="rotate" values="0 390 363; -360 390 363" dur="1.40s" repeatCount="indefinite" data-page-node-id="UqiiTH6Hrx3FBrnNy4bCBN"/><rect x="371" y="358" width="38" height="9" rx="4" fill="#3b4353" data-page-node-id="AjoGivnpeQrGnx6DX7BEBm"/><path d="M 373 354 q 17 -13 40 -6 q 11 3 8 10 q -21 6 -42 3 q -10 -2 -6 -7 z" fill="#7f8ea6" stroke="#5d6b80" stroke-width="3" stroke-linejoin="round" data-page-node-id="f2dCXeMYGCuFG7e89r4Mpa"/></g></g>
+  <!-- 远侧腿 -->
+  <g data-page-node-id="LeHUtGNfmvNbLSGUYSCo50"><animateTransform attributeName="transform" type="rotate" values="77.09 358 256; 78.46 358 256; 79.77 358 256; 80.98 358 256; 76.17 358 256; 70.51 358 256; 66.52 358 256; 63.02 358 256; 59.73 358 256; 56.52 358 256; 53.35 358 256; 50.19 358 256; 47.07 358 256; 44.00 358 256; 41.06 358 256; 38.33 358 256; 35.89 358 256; 33.86 358 256; 32.34 358 256; 31.41 358 256; 31.14 358 256; 31.55 358 256; 32.66 358 256; 34.45 358 256; 36.91 358 256; 40.02 358 256; 43.76 358 256; 48.18 358 256; 53.45 358 256; 60.30 358 256; 69.02 358 256; 70.21 358 256; 71.50 358 256; 72.86 358 256; 74.27 358 256; 75.68 358 256; 77.09 358 256" dur="1.40s" repeatCount="indefinite" data-page-node-id="ayAfXj0lDtbEjAXX4Ka95h"/><line x1="358" y1="256" x2="432" y2="256" stroke="#93a5b8" stroke-width="22" stroke-linecap="round" data-page-node-id="b2GOIEOa8wbeCHBwpkbCNn"/><line x1="358" y1="256" x2="432" y2="256" stroke="#cfdbe8" stroke-width="16" stroke-linecap="round" data-page-node-id="UMJI0CBtt1A6WHhr5QRjpH"/><g data-page-node-id="Za5nyk9iE9ui25O56RG0VA"><animateTransform attributeName="transform" type="rotate" values="1.81 432 256; 1.82 432 256; 1.84 432 256; 1.86 432 256; 13.71 432 256; 26.90 432 256; 36.40 432 256; 44.47 432 256; 51.65 432 256; 58.09 432 256; 63.86 432 256; 68.96 432 256; 73.34 432 256; 76.97 432 256; 79.78 432 256; 81.72 432 256; 82.75 432 256; 82.85 432 256; 82.02 432 256; 80.27 432 256; 77.64 432 256; 74.18 432 256; 69.95 432 256; 65.01 432 256; 59.38 432 256; 53.08 432 256; 46.07 432 256; 38.21 432 256; 29.10 432 256; 17.21 432 256; 1.87 432 256; 1.84 432 256; 1.82 432 256; 1.81 432 256; 1.80 432 256; 1.80 432 256; 1.81 432 256" dur="1.40s" repeatCount="indefinite" data-page-node-id="pxahyZ9ldD3fQi6eoqMWQx"/><line x1="432" y1="256" x2="506" y2="256" stroke="#93a5b8" stroke-width="18" stroke-linecap="round" data-page-node-id="tIe95yaft6Smwbd0Xmfe9d"/><line x1="432" y1="256" x2="506" y2="256" stroke="#cfdbe8" stroke-width="12" stroke-linecap="round" data-page-node-id="4CyhLVnnUSryWxzUWsuIpo"/></g></g>
+
+  <!-- 车架 -->
+    <g stroke-linecap="round" fill="none" data-page-node-id="AKAYWArrNTIqROkG8BJhhp">
+    <g stroke="#e05a47" stroke-width="9" data-page-node-id="UwrkL2ytQH9hhyNXXtSWKW">
+      <line x1="250" y1="385" x2="390" y2="385" data-page-node-id="FtxDSTyMRE8y2rJwx1K3w6"/>
+      <line x1="250" y1="385" x2="330" y2="305" data-page-node-id="poCgHt8RZFgQkwlK676P3F"/>
+      <line x1="390" y1="385" x2="330" y2="305" data-page-node-id="HkH1sDMhPtwdehMVCLPH2T"/>
+      <line x1="390" y1="385" x2="505" y2="300" data-page-node-id="CFmYtIW8sHirACnggLABBb"/>
+      <line x1="330" y1="305" x2="502" y2="272" data-page-node-id="oYgbqYCyd2E2B6mk3aoF0p"/>
+    </g>
+    <line x1="330" y1="305" x2="322" y2="296" stroke="#8b95a5" stroke-width="8" data-page-node-id="NtcVMKrJHksULwKZ25CPav"/>
+    <line x1="502" y1="272" x2="505" y2="300" stroke="#aab6c6" stroke-width="10" data-page-node-id="QJl6QYyY81GYluUG1gSoLU"/>
+    <line x1="505" y1="300" x2="545" y2="385" stroke="#8b95a5" stroke-width="7" data-page-node-id="cnQj9VPCZ6360gH6FUmZ8d"/>
+    <path d="M 496 268 C 494 256, 504 249, 516 251 L 534 255" stroke="#3b4353" stroke-width="8" data-page-node-id="ergR6z2W8Wit1YTrvjDDWh"/>
+    <path d="M 520 252 L 534 255" stroke="#20242e" stroke-width="11" data-page-node-id="ZhQ2dVwHKSpysj2asAXsa3"/>
+  </g>
+  <!-- 链条 + 牙盘 -->
+  <line x1="390" y1="359" x2="250" y2="373" stroke="#8b95a5" stroke-width="3" data-page-node-id="ExNlfuNabE5WDZ6r9RqxCx"/>
+  <line x1="390" y1="411" x2="250" y2="397" stroke="#8b95a5" stroke-width="3" data-page-node-id="eIRFPIgRm2MP46JTdMTW62"/>
+  <g data-page-node-id="7re6hxMdQas2daCCpDd8ii">
+    <animateTransform attributeName="transform" type="rotate" values="0 390 385; 360 390 385" dur="1.40s" repeatCount="indefinite" data-page-node-id="e0MtzqE8n6NyAxysU7wRRy"/>
+    <circle cx="390" cy="385" r="26" fill="none" stroke="#aab6c6" stroke-width="4" data-page-node-id="wsINkAEjxyGZYrdByIAm7T"/>
+    <circle cx="390" cy="385" r="19" fill="none" stroke="#c3cedd" stroke-width="3" stroke-dasharray="4 5" data-page-node-id="GReLPg92sQqKGgzv70vWh6"/>
+    <line x1="390" y1="385" x2="390" y2="359" stroke="#c3cedd" stroke-width="4" data-page-node-id="46xb55xiDoEITihtdCExqt"/>
+    <line x1="390" y1="385" x2="390" y2="411" stroke="#c3cedd" stroke-width="4" data-page-node-id="mjoFopGKaekNI88mSPqmNy"/>
+  </g>
+  <!-- 坐垫 -->
+  <path d="M 300 297 C 306 288, 340 285, 350 292 C 355 297, 344 302, 328 302 C 312 302, 301 301, 300 297 Z" fill="#2f3542" data-page-node-id="Vz4Jz9nJzoQro536f4AQ9O"/>
+
+  <!-- 近侧曲柄 + 踏板 -->
+  <g opacity="1" data-page-node-id="fkSczg5avYW5fGmkK2077y"><animateTransform attributeName="transform" type="rotate" values="0 390 385; 360 390 385" dur="1.40s" repeatCount="indefinite" data-page-node-id="eDgiwrF31hV74AvCzQnpxA"/><line x1="390" y1="385" x2="390" y2="363" stroke="#3b4353" stroke-width="9" stroke-linecap="round" data-page-node-id="V9ifZSVkjuaE4KKHBgm9FX"/><g data-page-node-id="4tUG9gZJtBYTdUFk5uV95b"><animateTransform attributeName="transform" type="rotate" values="0 390 363; -360 390 363" dur="1.40s" repeatCount="indefinite" data-page-node-id="FEYJUntshMk4amCxazXyGF"/><rect x="371" y="358" width="38" height="9" rx="4" fill="#3b4353" data-page-node-id="O3BsCZWtj6arHv3r4C9mcY"/><path d="M 373 354 q 17 -13 40 -6 q 11 3 8 10 q -21 6 -42 3 q -10 -2 -6 -7 z" fill="#f6a821" stroke="#c98311" stroke-width="3" stroke-linejoin="round" data-page-node-id="NWJf8e6yp10gXgB34pvkmd"/></g></g>
+  <!-- 近侧腿 -->
+  <g data-page-node-id="6WxxfgnZdnB0XP0ngDVQ78"><animateTransform attributeName="transform" type="rotate" values="31.18 366 262; 29.89 366 262; 29.22 366 262; 29.22 366 262; 29.89 366 262; 31.21 366 262; 33.14 366 262; 35.63 366 262; 38.62 366 262; 42.03 366 262; 45.81 366 262; 49.88 366 262; 54.18 366 262; 58.62 366 262; 63.11 366 262; 67.47 366 262; 71.27 366 262; 73.61 366 262; 73.85 366 262; 72.79 366 262; 71.18 366 262; 69.31 366 262; 67.28 366 262; 65.12 366 262; 62.85 366 262; 60.45 366 262; 57.93 366 262; 55.29 366 262; 52.53 366 262; 49.66 366 262; 46.71 366 262; 43.73 366 262; 40.77 366 262; 37.93 366 262; 35.30 366 262; 33.02 366 262; 31.18 366 262" dur="1.40s" repeatCount="indefinite" data-page-node-id="2acAyv2ZFutfjN1oSUkAFu"/><line x1="366" y1="262" x2="440" y2="262" stroke="#2b3445" stroke-width="23" stroke-linecap="round" data-page-node-id="ZQ4WvQi2kMCKW1ucpjTgLH"/><line x1="366" y1="262" x2="440" y2="262" stroke="#ffffff" stroke-width="17" stroke-linecap="round" data-page-node-id="i6e6NKkuCLFPJEWj9g7KHt"/><g data-page-node-id="uCY5MX9zrrr1Wuth9fFIi8"><animateTransform attributeName="transform" type="rotate" values="90.92 440 262; 89.53 440 262; 87.32 440 262; 84.35 440 262; 80.70 440 262; 76.44 440 262; 71.66 440 262; 66.44 440 262; 60.84 440 262; 54.93 440 262; 48.78 440 262; 42.46 440 262; 36.03 440 262; 29.58 440 262; 23.26 440 262; 17.38 440 262; 12.71 440 262; 11.02 440 262; 13.51 440 262; 18.54 440 262; 24.56 440 262; 30.92 440 262; 37.37 440 262; 43.78 440 262; 50.08 440 262; 56.18 440 262; 62.03 440 262; 67.56 440 262; 72.70 440 262; 77.38 440 262; 81.51 440 262; 85.03 440 262; 87.84 440 262; 89.88 440 262; 91.10 440 262; 91.44 440 262; 90.92 440 262" dur="1.40s" repeatCount="indefinite" data-page-node-id="6WtxPHJ3h3S2KDSFRRF786"/><line x1="440" y1="262" x2="514" y2="262" stroke="#2b3445" stroke-width="19" stroke-linecap="round" data-page-node-id="FBNsqtnqDfJE8rYs0PxqEf"/><line x1="440" y1="262" x2="514" y2="262" stroke="#ffffff" stroke-width="13" stroke-linecap="round" data-page-node-id="8NFmSLwQ3yrAU0tfMidyBn"/></g></g>
+
+
+  <!-- ===== 鹈鹕 ===== -->
+  <g data-page-node-id="EBGd0O8QI3OLsGGm0b5oZY">
+    <!-- 尾羽 -->
+    <path d="M 292 234 C 254 224, 224 216, 200 216 C 224 228, 250 240, 278 250 Z"
+          fill="#eaf2fa" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="6iTtvv0PM28KBK7jIF9tJy"/>
+    <path d="M 292 252 C 254 246, 220 242, 196 244 C 220 256, 250 264, 280 270 Z"
+          fill="#e2ecf7" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="ird8D12yD05Lvw1oBRlSmD"/>
+    <path d="M 290 268 C 258 270, 228 276, 206 282 C 228 292, 258 296, 286 292 Z"
+          fill="#dbe7f4" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="ps6ZqwmIopF5BXqc7tIajG"/>
+    <!-- 远侧翅膀尖 -->
+    <path d="M 288 198 C 258 190, 228 192, 208 204 C 232 202, 258 204, 288 212 Z"
+          fill="#dde7f1" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="zRT2wc0r46V1bA7m5fTckq"/>
+    <!-- 脖子 -->
+    <path d="M 368 210 C 392 198, 404 172, 426 152" stroke="#2b3445" stroke-width="46" fill="none" stroke-linecap="round" data-page-node-id="VR1tX2u7bKzMUXYR7SN9xL"/>
+    <path d="M 368 210 C 392 198, 404 172, 426 152" stroke="#ffffff" stroke-width="40" fill="none" stroke-linecap="round" data-page-node-id="L6GipJ4Yv4ZuwY8H9FTVYH"/>
+    <!-- 头 -->
+    <circle cx="446" cy="140" r="23" fill="#ffffff" stroke="#2b3445" stroke-width="3" data-page-node-id="FeoYZfL5qLoyrfXgElF5rR"/>
+    <!-- 长喙 -->
+    <path d="M 460 126 L 574 145 L 578 155 L 460 147 Z" fill="#f6a821" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="UDCwmj4Rt5QJZHAEs2gF1y"/>
+    <!-- 喉囊 -->
+    <path d="M 461 147 L 571 153 C 574 172, 562 199, 534 208 C 501 218, 464 198, 461 147 Z"
+          fill="#ffc94d" stroke="#2b3445" stroke-width="3" stroke-linejoin="round" data-page-node-id="BQfSbPVSqUQYsKhgeXuBfv"/>
+    <path d="M 462 147 L 572 153" stroke="#c98311" stroke-width="2.6" fill="none" data-page-node-id="VA195h3bCVysNw3gacsQTz"/>
+    <ellipse cx="486" cy="136" rx="4.4" ry="2.2" fill="#c98311" data-page-node-id="UYdMrRZKdHaR5vRX2RYEAR"/>
+    <!-- 眼睛 -->
+    <circle cx="451" cy="129" r="5.8" fill="#2b3445" data-page-node-id="5QNx3QuyuqjqtlBtUsDF06"/>
+    <circle cx="452.8" cy="127.2" r="2" fill="#ffffff" data-page-node-id="NKhGgAa7RkiRHjcso0RFmV"/>
+    <!-- 身体 -->
+    <ellipse cx="330" cy="236" rx="74" ry="54" transform="rotate(-8 330 236)"
+             fill="#ffffff" stroke="#2b3445" stroke-width="3" data-page-node-id="80848bqFay699dHFN7fbNU"/>
+    <!-- 近侧翅膀 -->
+    <g data-page-node-id="rnXJed9JxGEGj7BMIdbOfT">
+      <animateTransform attributeName="transform" type="rotate" values="0.00 306 214; 1.70 306 214; 2.94 306 214; 3.40 306 214; 2.94 306 214; 1.70 306 214; 0.00 306 214; -1.70 306 214; -2.94 306 214; -3.40 306 214; -2.94 306 214; -1.70 306 214; -0.00 306 214" dur="1.4s" repeatCount="indefinite" data-page-node-id="KMYYnNvwPYFwV8nOWJN5Ei"/>
+      <path d="M 294 198 C 340 188, 384 210, 391 242 C 397 274, 374 296, 342 296 C 310 296, 286 272, 287 242 Z"
+            fill="#e9f2fb" stroke="#2b3445" stroke-width="3.2" stroke-linejoin="round" data-page-node-id="tlMY6jOEc9MjIHd0TKu6pA"/>
+      <path d="M 290 240 C 320 224, 356 224, 380 244" stroke="#c9d6e4" stroke-width="3" fill="none" stroke-linecap="round" data-page-node-id="uFamodNVzQq1sdqFI6kOO7"/>
+      <path d="M 311 258 C 336 258, 358 268, 370 282" stroke="#c9d6e4" stroke-width="3" fill="none" stroke-linecap="round" data-page-node-id="nEc3LXpvOOelP5l6KuKYtt"/>
+      <path d="M 300 274 C 320 274, 338 280, 348 288" stroke="#c9d6e4" stroke-width="3" fill="none" stroke-linecap="round" data-page-node-id="b5pxrxSk1WddHmFRAzdw9N"/>
+    </g>
+    <!-- 围巾 -->
+    <g fill="none" data-page-node-id="WzcbIJctBBHgl5LDcSXfSz">
+      <animateTransform attributeName="transform" type="rotate" values="0 367 200; -5.5 367 200; 0 367 200; 4.5 367 200; 0 367 200" dur="1.05s" repeatCount="indefinite" data-page-node-id="Do7Bm1yKkwQ9kGGAgeMhDh"/>
+      <path d="M 366 196 C 342 176, 320 186, 300 168 C 288 157, 274 158, 258 151" stroke="#2b3445" stroke-width="27" stroke-linecap="round" data-page-node-id="CGFW1WEOXMRdm5EDXY0SsL"/>
+      <path d="M 366 196 C 342 176, 320 186, 300 168 C 288 157, 274 158, 258 151" stroke="#e0574a" stroke-width="21" stroke-linecap="round" data-page-node-id="sJrS6w1rcpiyNsHhIckVM7"/>
+      <path d="M 366 210 C 340 208, 312 202, 282 201" stroke="#2b3445" stroke-width="24" stroke-linecap="round" data-page-node-id="AfZFdSJGVc07jThtF4eVXN"/>
+      <path d="M 366 210 C 340 208, 312 202, 282 201" stroke="#c9483c" stroke-width="18" stroke-linecap="round" data-page-node-id="H3oyrC2K3bQgrBM1EtVebX"/>
+      <ellipse cx="368" cy="203" rx="12" ry="13" fill="#e0574a" stroke="#2b3445" stroke-width="3" data-page-node-id="M17aGBHCOwD50k1dbuaenP"/>
+    </g>
+  </g>
+
+</g>
+    </svg>
+    <p class="caption" data-page-node-id="ZCPBGmMbCirADJ7NaUfIIJ">鹈鹕 · 骑行中</p>
+  </main>
+</body>
+</html>
